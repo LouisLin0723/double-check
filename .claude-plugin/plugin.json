@@ -1,0 +1,9 @@
+{
+  "name": "double-check",
+  "version": "1.0.0",
+  "description": "Force the AI to rigorously self-review its own work before shipping — catches the bugs, holes and hallucinations it missed the first time. Bidirectional review + reverse rebuttal + domain checklists. Includes 1/2/3 shortcut workflow.",
+  "author": {
+    "name": "Louis Lin",
+    "url": "https://github.com/LouisLin0723"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "double-check",
+  "description": "Force the AI to double-check its own work — a self-review skill that catches the bugs, holes and hallucinations the AI missed the first time.",
+  "owner": {
+    "name": "Louis Lin",
+    "url": "https://github.com/LouisLin0723"
+  },
+  "plugins": [
+    {
+      "name": "double-check",
+      "description": "Make the AI rigorously review its own output before you ship: bidirectional reasoning + reverse rebuttal + domain checklists (13/21/18 questions). Catches AI hallucinations and false 'done'. Trigger with 2 / 'double-check' / 'review'.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
