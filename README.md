@@ -50,6 +50,29 @@ flowchart TD
 
 复盘消不掉幻觉(没人能),但能把 AI 的**严谨度实打实再顶高一档**。
 
+## 🔬 真实示例 / Worked example
+
+你让 Claude 写个「取数组中位数」的函数,它给你:
+
+```js
+function median(arr) {
+  arr.sort((a, b) => a - b);
+  return arr[Math.floor(arr.length / 2)];
+}
+```
+
+> Claude:"搞定了 ✅"
+
+你打 `2`。double-check 用代码清单逼它复盘自己,当场揪出 **3 个它第一遍没看见的洞**:
+
+- 🐛 **边界(偶数长度)** — 偶数个元素时返回的是中间偏右那个,不是真中位数(该取中间两数的平均)
+- 🐛 **互相污染** — `arr.sort()` 原地改了调用者传进来的数组,留下副作用
+- 🐛 **空输入** — `median([])` 返回 `undefined`,根本没处理
+
+第一遍那句"搞定了"漏了 3 个 bug。这就是 double-check 的价值 —— **把"看了 1% 就喊完成"逼成"再查一遍"。**
+
+> *Ask Claude for a `median()` function and it confidently ships one with three bugs: even-length midpoint, in-place `sort()` side-effect, and an empty-array crash. Hit `2` — double-check's checklist surfaces all three. That's the point.*
+
 ## 🎯 怎么用 / How to use
 
 复盘是核心,触发它只要一个动作:
